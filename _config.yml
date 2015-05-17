@@ -13,5 +13,8 @@ constant:
 sass:
     sass_dir: /assets/stylesheets/
 
+javascript:
+    javascript_dir: /assets/javascripts/
+
 # Build settings
 markdown: redcarpet
