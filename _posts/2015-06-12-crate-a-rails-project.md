@@ -27,3 +27,26 @@ l
 * 如果想查看所有 Rake 任务
 
 > $ bundle exec rake -T
+
+
+### 4. 数据验证
+```Ruby on rails
+class Micropost < ActiveRecord::Base
+  validates :content, length: { maximum: 140 }
+  # 长度不能超过140个字
+end
+```
+
+
+
+### 5. 修改model模型
+
+> $ rails generate migration RanemeMicropostsUserid
+
+```Ruby
+class RanemeMicropostsUserid < ActiveRecord::Migration
+  def change
+    rename_column :microposts, :user_id, :user_id
+  end
+end
+```
