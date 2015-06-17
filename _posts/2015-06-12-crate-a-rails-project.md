@@ -7,10 +7,12 @@ categories: Rail, Ruby
 
 
 ### 1. 创建一个应用框架
+
 > $ rails new myProject
-l
+
 
 ### 2. 创建数据模型
+
 > $ rails generate scaffold User name:string email:string
 > $ bundle exec rake db:migrate
 
@@ -48,5 +50,53 @@ class RanemeMicropostsUserid < ActiveRecord::Migration
   def change
     rename_column :microposts, :user_id, :user_id
   end
+end
+```
+
+
+### 6. 创建控制器
+
+> $ rails generate controller StaticPages home help
+> $ rails destroy  controller StaticPages home help
+
+### 7. 创建Model
+
+> $ rails generate model User name:string email:string
+> $ rails destroy model User
+
+### 8. 数据库迁移
+> $ bundle exec rake db:migrate
+> $ bundle exec rake db:rollback
+
+* 撤销前一个迁移的操作
+
+> $ bundle exec rake db:migrate VERSION=0
+
+* 回滚到一开始的版本
+
+### 9. TDD
+
+> $ bundle exec rake text
+
+* 运行测试
+
+### 10. debug gem
+
+* 修改 test/test_helper.rb 文件
+
+```
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/environment', __FILE__)
+require 'rails/test_help'
+# 添加以下两行
+require "minitest/reporters"
+Minitest::Reporters.use!
+
+class ActiveSupport::TestCase
+  # Setup all fixtures in test/fixtures/*.yml
+  # for all tests in alphabetical order.
+  fixtures :all
+
+  # Add more helper methods to be used by all tests here...
 end
 ```
