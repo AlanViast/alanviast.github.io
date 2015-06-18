@@ -100,3 +100,35 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 ```
+
+### 11.重点
+* 使用 `rails console` 可以进入console模式
+* 可以使用 push 方法向数组中添加元素，或者使用等价的 << 操作符
+* 在 Ruby 中，一切皆对象，包括字符串和 nil 都是。
+
+### 12. 字符串类型
+
+```
+"" # 空字符串
+puts "foo" + "bar" # 字符串拼接, puts 输出函数
+first_name = "Moga"
+last_name = "Viast"
+puts "#{first_name} #{last_name}"
+
+'#{first_name} last_name'     # 单引号字符串不能进行插值操作
+```
+
+
+### 13.
+
+```
+"foobar".length # 字符串length方法
+
+foo = "foobar"
+foo.empty? # 判断当前字符串是否为空字符串
+# empty? 方法末尾有个问号，这是 Ruby 的约定，说明方法的返回值是布尔值，即 true 或 false。
+foo.nil? # 判断foo对象是否为nil
+
+
+
+```
