@@ -100,3 +100,9 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 ```
+
+### 11. 重点
+* Ruby 不会对单引号字符串进行插值操作
+* empty? 方法末尾有个问号，这是 Ruby 的约定，说明方法的返回值是布尔值，即 true 或 false。
+* to_s 方法基本上可以把任何对象转换成字符串
+* %w 用来创建元素为字符串的数组 `%w[a b c]`
