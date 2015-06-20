@@ -310,6 +310,59 @@ h[:foo]
 s = String.new("foobar")
 s.class
 s.class.superclass
+
+
+class Word
+    def palindrome?(string)
+        string == string.reverse
+    end
+end
+
+w = Word.new
+
+w.palindrome?("foobar") # => false
+w.palindrome?("level") # => true
+
+class Word < String
+    def palindrome?
+        self == self.reverse
+    end
+end
+
+s = Word.new("foobar")
+s.palindrome? # => false
+
+s = Word.new("level")
+s.palindrome? # => true
+
+# 给 String 类添加方法
+class String
+    def palindrome?
+        self == self.reverse
+    end
+end
+
+# 判断字符串是否为空, 除空格
+"    ".blank? # => true
+nil.blank? # => ture
+
+
+# 合并哈希
+{ "a" => 100, "b" => 200 }.merge({ "b" => 300 })
+
+
+# 打乱字符串
+def string_shuffle(s)
+   s.split('').shuffle.join
+end
+
+# 修改字符串shuffle方法
+class String
+    def shuffle
+        self.split('').shuffle.join
+    end
+end
+
 ```
 
 ### last. 重点
