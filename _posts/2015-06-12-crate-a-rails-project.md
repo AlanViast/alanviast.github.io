@@ -76,9 +76,13 @@ end
 
 ### 9. TDD
 
-> $ bundle exec rake text
+> $ bundle exec rake test
 
 * 运行测试
+
+> $ bundle exec rake test:integration
+
+* 运行集成测试
 
 ### 10. debug gem
 
@@ -310,7 +314,107 @@ h[:foo]
 s = String.new("foobar")
 s.class
 s.class.superclass
+
+
+class Word
+    def palindrome?(string)
+        string == string.reverse
+    end
+end
+
+w = Word.new
+
+w.palindrome?("foobar") # => false
+w.palindrome?("level") # => true
+
+class Word < String
+    def palindrome?
+        self == self.reverse
+    end
+end
+
+s = Word.new("foobar")
+s.palindrome? # => false
+
+s = Word.new("level")
+s.palindrome? # => true
+
+# 给 String 类添加方法
+class String
+    def palindrome?
+        self == self.reverse
+    end
+end
+
+# 判断字符串是否为空, 除空格
+"    ".blank? # => true
+nil.blank? # => ture
+
+
+# 合并哈希
+{ "a" => 100, "b" => 200 }.merge({ "b" => 300 })
+
+
+# 打乱字符串
+def string_shuffle(s)
+   s.split('').shuffle.join
+end
+
+# 修改字符串shuffle方法
+class String
+    def shuffle
+        self.split('').shuffle.join
+    end
+end
+
 ```
+
+### 16.
+
+<table id="table-assert-select" class="tableblock frame-all grid-all" style="width: 100%;">
+  <caption><span class="title-label">表 5.2：</span><code>assert_select</code> 的一些用法</caption>
+  <colgroup>
+  <col style="width: 50%;">
+  <col style="width: 50%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th class="tableblock halign-left valign-top">代码</th>
+      <th class="tableblock halign-left valign-top">匹配的 HTML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "div"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;div&gt;foobar&lt;/div&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "div", "foobar"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;div&gt;foobar&lt;/div&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "div.nav"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;div class="nav"&gt;foobar&lt;/div&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "div#profile"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;div id="profile"&gt;foobar&lt;/div&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "div[name=yo]"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;div name="yo"&gt;hey&lt;/div&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "a[href=?]", ’/’, count: 1</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;a href="/"&gt;foo&lt;/a&gt;</code></p></td>
+    </tr>
+    <tr>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>assert_select "a[href=?]", ’/’, text: "foo"</code></p></td>
+      <td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;a href="/"&gt;foo&lt;/a&gt;</code></p></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### last. 重点
 * Ruby 中的一切都是对象
