@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "搭建一个Ruby On Rails 的项目"
+title: "搭建一个Ruby On Rails 的项目(一)"
 date:  2015-06-12 17:00:00
 categories: Rail, Ruby
 ---
