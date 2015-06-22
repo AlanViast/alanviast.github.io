@@ -145,7 +145,9 @@ email.downcase! # 操作结果会赋给自己
 ```
 
 
+### 8. 运行单个测试
 
+> $ bundle exec rake test TEST=test/integration/users_login_test.rb
 
 
 
