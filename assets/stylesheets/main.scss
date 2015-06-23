@@ -33,6 +33,11 @@ $post-list-spacing: 10px;
 
 $footer-height: 50px;
 $footer-bg-color: #f5f5f5;
+
+
+// About me
+$about-me-font-size: 24px;
+
 // Using media queries with like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -52,6 +57,7 @@ $footer-bg-color: #f5f5f5;
 @import
         "base",
         "layout",
+        "animate",
         "bootstrap",
         "syntax-highlighting"
 ;

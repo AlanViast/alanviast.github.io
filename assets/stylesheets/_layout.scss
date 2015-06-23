@@ -78,3 +78,15 @@ body{
     color: $grey-color;
     padding: 0 3px;
 }
+
+/* About Me*/
+.about-me{
+    font-size: $about-me-font-size;
+    display: inline-block;
+    text-align: center;
+    padding-right: 5px;
+    border-right: 1px solid #000;
+    -webkit-animation: editWord 1s infinite;
+    -moz-animation:    editWord 1s infinite;
+    animation:         editWord 1s infinite;
+}

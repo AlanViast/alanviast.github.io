@@ -1,0 +1,35 @@
+@keyframes editWord {
+    0%{
+      border-right: 1px solid #000;
+    }
+    50% {
+        border-right: 1px solid transparent;
+    }
+    100% {
+        border-right: 1px solid #000;
+    }
+}
+
+@-moz-keyframes editWord /* Firefox */ {
+    0%{
+      border-right: 1px solid #000;
+    }
+    50% {
+        border-right: 1px solid transparent;
+    }
+    100% {
+        border-right: 1px solid #000;
+    }
+}
+
+@-webkit-keyframes editWord /* Safari 和 Chrome */ {
+    0%{
+      border-right: 1px solid #000;
+    }
+    50% {
+        border-right: 1px solid transparent;
+    }
+    100% {
+        border-right: 1px solid #000;
+    }
+}
