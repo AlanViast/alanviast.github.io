@@ -149,12 +149,20 @@ email.downcase! # 操作结果会赋给自己
 
 > $ bundle exec rake test TEST=test/integration/users_login_test.rb
 
+> $ bundle exec rake test TEST=test/integration/users_login_test.rb TESTOPTS="--name test_login_with_valid_information"  # 执行某个测试用例执行
+
+### 9. 操作Session
+
+> session[:user_id] = user.id # 在Session添加一个值
+
+> redirect_to user # 等同于  => redirect_to user_path(user)
 
 
-
-
-
-
+### 10. Heroku部署 ( 维护模式 )
+> $ heroku maintenance:on
+> $ git push heroku
+> $ heroku run rake db:migrate
+> $ heroku maintenance:off
 
 
 ### Last. 注意
