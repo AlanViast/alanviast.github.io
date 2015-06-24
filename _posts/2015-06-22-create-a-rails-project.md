@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "搭建一个Ruby On Rails 的项目(二)"
-date:  2015-06-12 17:00:00
+date:  2015-06-22 17:00:00
 categories: Rail, Ruby
 ---
 
