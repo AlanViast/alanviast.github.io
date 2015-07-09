@@ -32,7 +32,7 @@ categories: Rail, Ruby
 
 
 ### 4. 数据验证
-```Ruby on rails
+```
 class Micropost < ActiveRecord::Base
   validates :content, length: { maximum: 140 }
   # 长度不能超过140个字
