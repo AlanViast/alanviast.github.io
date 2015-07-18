@@ -34,3 +34,23 @@ categories: Linux, Shell
 
 > $ cat > temp.txt # 会将我们的输入输出到temp.txt文件
 
+> $ cat >> Temp.txt # 将输出添加到Temp.txt文件中
+
+* | 管道命令
+
+> ls /bin /usr/bin | less # 将/bin目录下和/usr/bin目录下的所有结果输出到less命令中.
+
+
+* sort 命令
+
+> $ ls /usr/bin | sort # 将/bin目录下和/usr/bin目录下的所有结果输出到sort命令中, 结果会输出一个有序的列表
+
+> $ ls /bin /usr/bin | sort | less # 同上, 只是会将结果输入到less命令中
+
+* uniq 命令
+
+> $ ls /bin /usr/bin | uniq # 将结果忽略重复行, 就是不重复的集合
+
+* wc 命令
+
+> $ wc Temp.txt # 显示文件所包含的行, 字和字节数
