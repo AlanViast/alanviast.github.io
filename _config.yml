@@ -6,6 +6,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://alanviast.github.io" # the base hostname & protocol for your site
 github_username:  AlanViast
 
+paginate: 15
+paginate_path: "/page:num/"
 
 constant:
     delimiter: "~"

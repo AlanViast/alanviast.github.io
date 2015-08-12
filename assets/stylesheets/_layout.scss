@@ -25,6 +25,7 @@ body{
 .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
+    padding: 0 3px;
 }
 
 
@@ -74,9 +75,6 @@ body{
 
 .delimiter{
     @extend .post-meta;
-    font-size: $small-font-size;
-    color: $grey-color;
-    padding: 0 3px;
 }
 
 /* About Me*/
@@ -89,4 +87,11 @@ body{
     -webkit-animation: editWord 1s infinite;
     -moz-animation:    editWord 1s infinite;
     animation:         editWord 1s infinite;
+}
+
+.pagination {
+    width: 100%;
+    > .page_number {
+        margin: 0 15px;
+    }
 }
