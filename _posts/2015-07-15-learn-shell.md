@@ -54,3 +54,5 @@ categories: Linux, Shell
 * wc 命令
 
 > $ wc Temp.txt # 显示文件所包含的行, 字和字节数
+
+* grep 命令
