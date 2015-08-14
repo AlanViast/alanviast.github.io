@@ -56,3 +56,27 @@ categories: Linux, Shell
 > $ wc Temp.txt # 显示文件所包含的行, 字和字节数
 
 * grep 命令
+
+> $ grep pattern [file...] # grep 是个很强大的程序，用来找到文件中的匹配文本
+
+> $ ls /bin /usr/bin | sort | uniq | grep zip
+
+* head 命令
+
+> & ls /usr/bin | head # 输出头部前10行, -n 参数选择输出的行数
+
+* tail 命令
+
+> $ ls /usr/bin | tail # 输出尾部前10行, -n 参数可以选择输出的行数. -f 允许事实显示内容
+
+* tee 命令
+
+> $ cat test.txt | tee demo.txt | grep 'Test' # 从 Stdin 读取数据，并同时输出到 Stdout 和文件
+
+* echo 命令
+
+> $ echo * # 将当前目录下所有文件名输出
+
+> $ echo D* # 输出所有D开头所有文件名 echo /usr/*/share
+
+> $ echo $(( 2 + 2 )) # 可以用 $(()) 的方式进行运算
