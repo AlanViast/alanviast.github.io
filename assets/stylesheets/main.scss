@@ -55,6 +55,8 @@ $about-me-font-size: 24px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "variables",
+        "mixins",
         "base",
         "layout",
         "animate",

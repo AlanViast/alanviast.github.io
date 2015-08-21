@@ -19,6 +19,31 @@ body{
     > li {
         margin-top: $post-list-spacing;
         margin-bottom: $post-list-spacing;
+        > a {
+            text-decoration: none;
+            border-bottom: 0px solid transparent;
+            position: relative;
+            padding: 2px 0;
+
+            &:hover {
+                color: $post-link-hover-color;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-bottom: 1px solid $post-link-hover-color;
+                width: 0px;
+                left: 0;
+                bottom: 0;
+                @include transition(1s);
+            }
+
+            &:hover::after {
+                width: 100%;
+                @include transition(1s);
+            }
+        }
     }
 }
 
