@@ -80,6 +80,7 @@ db.user.insertOne({
 * **db.user.updateOne** 第一个参数接受需要修改对象的查询条件, $set表示需要修改的内容. item.height表示子集中的内容.
 * updateMany 更新多个对象中的值
 * replaceOne 会直接替换掉整个对象
+
 ```
 db.user.updateOne(
    { name: "AlanViast" },
@@ -100,3 +101,9 @@ db.user.replaceOne(
 
 * db.user.deleteOne({ name: "AlanViast"}) 删除掉单个对象
 * db.user.deleteMany 删除多个
+
+
+#### 10. 创建唯一索引
+
+* db.members.createIndex( { "user_id": 1 }, { unique: true } )
+
