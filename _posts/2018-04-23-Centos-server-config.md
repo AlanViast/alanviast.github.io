@@ -1,6 +1,6 @@
 ---
 layout: post
-title: “CnetOS 服务器配置教程”
+title: CnetOS 服务器配置教程
 date: 2018-04-23 00:45:00
 ---
 

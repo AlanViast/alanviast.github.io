@@ -7,7 +7,7 @@ categories: ac java code
 
 ## AC算法
 
-```Java
+```
 import java.util.*;
 import java.util.stream.IntStream;
 
