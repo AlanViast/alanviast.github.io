@@ -7,7 +7,7 @@ categories: ac java code
 
 ## AC算法
 
-```
+```java
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -89,6 +89,34 @@ public final class MySensitiveWordFilter {
         System.out.println(verify("xxxxxxxxxxxx打倒ABCxxxxxxxxxxx"));
     }
 
+}
+
+```
+
+```java
+import java.util.Map;
+
+public class AoMap {
+
+    private Map<Character, AoMap> next;
+    private boolean end = false;
+
+
+    public Map<Character, AoMap> getNext() {
+        return next;
+    }
+
+    public void setNext(Map<Character, AoMap> next) {
+        this.next = next;
+    }
+
+    public boolean isEnd() {
+        return end;
+    }
+
+    public void setEnd(boolean end) {
+        this.end = end;
+    }
 }
 
 ```
