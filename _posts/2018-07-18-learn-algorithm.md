@@ -2,7 +2,7 @@
 layout: post
 title:  "初级算法题"
 date:   2018-07-18 17:00:00
-categories: code algorithm
+categories: code algorithm leetcode
 ---
 
 
