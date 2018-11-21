@@ -82,6 +82,40 @@ POST /megacorp/employee/_search
 }
 ```
 
+```
+POST /megacorp/employee/_search
+{
+    "query" : {
+        "bool": {
+            "must": {
+                "match" : {
+                    "last_name" : "smith"
+                }
+            },
+            "filter": {
+                "range" : {
+                    "age" : { "gt" : 30 }
+                }
+            }
+        }
+    }
+}
+```
+
+* 多字段匹配
+
+```
+POST localhost:9200/megacorp/employee/_search
+{
+  "query": {
+    "multi_match" : {
+      "query":    "like",
+      "fields": [ "last_name", "about" ]
+    }
+  }
+}
+```
+
 
 ### 4. 坐标搜索
 
@@ -136,6 +170,24 @@ GET /my_locations/_search
                 }
             }
         }
+    }
+}
+```
+
+
+### 文档数量
+
+> $ GET localhost:9200/_count
+
+
+```
+{
+    "count": 920,
+    "_shards": {
+        "total": 28,
+        "successful": 28,
+        "skipped": 0,
+        "failed": 0
     }
 }
 ```
