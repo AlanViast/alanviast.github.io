@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git提交信息指南"
-date:   2019-01-09 18:44:03
+date:   2019-08-07 21:00:00
 categories: git
 ---
 
