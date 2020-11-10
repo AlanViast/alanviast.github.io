@@ -1,3 +1,1 @@
-(function($){
-    $(".about-me").editWord();
-})(jQuery);
+(function($){})(jQuery);
